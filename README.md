@@ -5,6 +5,15 @@
   ```
   git clone https://github.com/Jason-YJ/SegNeRF.git
   ```
+    
+- Install python packages with anaconda.
+  
+  ```
+  conda create -n SegNeRF python=3.7
+  conda activate SegNeRF
+  conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 -c pytorch
+  pip install -r requirements.txt
+  ```
   
 - Install Mseg 
   
@@ -20,15 +29,7 @@
   !cd mseg-api/mseg-semantic && pip install -r requirements.txt
   !cd mseg-api/mseg-semantic && pip install -e .
   ```
-  
-- Install python packages with anaconda.
-  
-  ```
-  conda create -n SegNeRF python=3.7
-  conda activate SegNeRF
-  conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 -c pytorch
-  pip install -r requirements.txt
-  ```
+
   
 - We use COLMAP to calculate poses and sparse depths. However, original COLMAP does not have fusion mask for each view. Thus, we add masks to COLMAP and denote it as a submodule. Please follow https://colmap.github.io/install.html to install COLMAP in `./colmap` folder (Note that do not cover colmap folder with the original version). 
 
