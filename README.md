@@ -5,6 +5,7 @@
   ```
   git clone https://github.com/Jason-YJ/SegNeRF.git
   ```
+  得手动新建个colmap文件夹然后去git clone https://github.com/Jason-YJ/colmap 然后再按官方步骤安装colmap
     
 - Install python packages with anaconda.
   
