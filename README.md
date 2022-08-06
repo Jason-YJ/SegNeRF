@@ -3,7 +3,7 @@
 ## Installation
 - Pull SegNeRF repo.
   ```
-  git clone --recursive git@github.com:weiyithu/NerfingMVS.git
+  git clone https://github.com/Jason-YJ/SegNeRF.git
   ```
   
 - Install Mseg 
