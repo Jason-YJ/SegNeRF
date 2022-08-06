@@ -3,7 +3,7 @@ sys.path.append('..')
 import numpy as np
 import torch
 import cv2
-import pyexr
+# import pyexr
 from utils.evaluation_utils import *
 
 from torch.utils.tensorboard import SummaryWriter
@@ -160,7 +160,7 @@ def train(args):
             depth_pred = depth_model.forward(batch).cpu().numpy()   # (288, 384)
             depth_color = visualize_depth(depth_pred)               # (288, 384, 3)
             cv2.imwrite(os.path.join(save_dir, 'results', '{}_depth.png'.format(frame_id)), depth_color)
-            pyexr.write(os.path.join(save_dir, 'results', '{}_depth.exr'.format(frame_id)), depth_pred)
+            # pyexr.write(os.path.join(save_dir, 'results', '{}_depth.exr'.format(frame_id)), depth_pred)
             np.save(os.path.join(save_dir, 'results', '{}_depth.npy'.format(frame_id)), depth_pred)
 
     print('results have been saved in {}'.format(os.path.join(save_dir, 'results')))

@@ -181,9 +181,9 @@ def render_path(render_poses, hwf, chunk, render_kwargs, image_list, sc,
             filename = os.path.join(savedir, '{}_depth.npy'.format(frame_id))
             np.save(filename, depth.cpu().numpy() / sc)
 
-            import pyexr
-            exr_name = os.path.join(savedir, '{}_depth.exr'.format(frame_id))
-            pyexr.write(exr_name, depth.cpu().numpy() / sc)
+            # import pyexr
+            # exr_name = os.path.join(savedir, '{}_depth.exr'.format(frame_id))
+            # pyexr.write(exr_name, depth.cpu().numpy() / sc)
             disp_visual = visualize_depth(depth.cpu().numpy())
             filename = os.path.join(savedir, '{}_depth.png'.format(frame_id))
             cv2.imwrite(filename, disp_visual)
